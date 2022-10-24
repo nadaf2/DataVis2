@@ -1,65 +1,62 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "https://raw.githubusercontent.com/nadaf2/DataVis2/main/data/OccupationData.csv"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/nadaf2/DataVis2/main/data/OccupationData.csv"
+  },
   "background": "null",
-  "width": 250,
-  "height": 350,
+  "width": 150,
+  "height": 150,
   "mark": "bar",
   "config": {
     "axis": {
       "labelColor": "whitesmoke",
       "titleColor": "whitesmoke",
-      "tickColor":"whitesmoke"
+      "tickColor": "whitesmoke"
     },
-    "legend": {
-      "labelColor": "whitesmoke",
-      "titleColor": "whitesmoke"
-    }},
+    "legend": {"labelColor": "whitesmoke", "titleColor": "whitesmoke"}
+  },
   "params": [
-   {
-     "name": "occupation_selection",
-     "bind": {
-       "input": "select",
-       "options": [
-         null,
-         "Managers",
-         "Professionals",
-         "Technicians and trades workers",
-         "Community and personal service workers",
-         "Clerical and administrative workers",
-         "Sales workers",
-         "Machinery operators and drivers",
-         "Labourers"
-       ],
-       "labels": [
-         "Show All",
-         "Managers",
-         "Professionals",
-         "Technicians and trades workers",
-         "Community and personal service workers",
-         "Clerical and administrative workers",
-         "Sales workers",
-         "Machinery operators and drivers",
-         "Labourers"
-       ]
-     }
-   }
- ],
- "transform": [
-   {
-     "filter": "occupation_selection == null || datum.Occupation == occupation_selection"
-   }
- ],
+    {
+      "name": "occupation_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Managers",
+          "Professionals",
+          "Technicians and trades workers",
+          "Community and personal service workers",
+          "Clerical and administrative workers",
+          "Sales workers",
+          "Machinery operators and drivers",
+          "Labourers"
+        ],
+        "labels": [
+          "Show All",
+          "Managers",
+          "Professionals",
+          "Technicians and trades workers",
+          "Community and personal service workers",
+          "Clerical and administrative workers",
+          "Sales workers",
+          "Machinery operators and drivers",
+          "Labourers"
+        ]
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "occupation_selection == null || datum.Occupation == occupation_selection"
+    }
+  ],
   "encoding": {
     "x": {
       "field": "Occupation",
       "type": "ordinal",
       "title": "Employment by occupation"
     },
-    "y": {
-      "field": "Percentage",
-      "type": "quantitative"
-    },
+    "y": {"field": "Percentage", "type": "quantitative"},
     "color": {
       "field": "Gender",
       "type": "nominal",
@@ -69,7 +66,9 @@
       },
       "title": "Sex"
     },
-    "tooltip": [{ "field": "Occupation", "type": "ordinal"} , 
-                {"field": "Percentage", "type": "quantitative"}]
+    "tooltip": [
+      {"field": "Occupation", "type": "ordinal"},
+      {"field": "Percentage", "type": "quantitative"}
+    ]
   }
 }
