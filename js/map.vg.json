@@ -1,5 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"view": {"stroke": "transparent"}},
+    "background": "null",
     "title": "Women in management positions globally (2021)",
     "width": 800,
     "height": 400,
