@@ -1,0 +1,35 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background": "null",
+    "data": {
+      "url": "https://raw.githubusercontent.com/nadaf2/DataVis2/main/data/EmploymentParent.csv"
+    },
+    "repeat": ["Percentage", "Parents_unemp_percentage"],
+    "spec": {
+      "width": 480,
+      "height": 240,
+      "mark": "line",
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "timeUnit": "year",
+          "title": "Employment by occupation"
+        },
+        "y": {
+          "field": {"repeat": "repeat"},
+          "type": "quantitative",
+          "scale": {"zero": false}
+        },
+        "color": {
+          "field": "Gender",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Female", "Male"],
+            "range": ["#e7ba52", "#1f77b4"]
+          },
+          "title": "Sex"
+        },
+        "tooltip": [{"field": {"repeat": "repeat"}, "type": "quantitative"}]
+      }
+    }
+  }

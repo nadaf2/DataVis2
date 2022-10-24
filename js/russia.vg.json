@@ -1,11 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "config": {"view": {"stroke": "transparent"}},
-    "background": "rgb(184, 140, 158)",
-    "title": "Women in management positions globally (2021)",
-    "width": 800,
-    "height": 400,
-    "projection": {"type": "equalEarth"},
+    "width": 300,
+    "height": 350,
+    "background": "null",
+    "projection": {"type": "mercator"},
     "data": {
       "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
       "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
@@ -15,19 +13,20 @@
         "lookup": "properties.NAME",
         "from": {
           "data": {
-            "url": "https://raw.githubusercontent.com/nadaf2/Data-Visualization-II/main/Data-Visualization-II/data/country_data.csv"
+            "url": "https://raw.githubusercontent.com/nadaf2/DataVis2/main/data/russiaFile.csv"
           },
           "key": "Country",
           "fields": ["Values"]
         }
       },
-      {"calculate": "datum.Values", "as": "Active Cases"}
+      {"calculate": "datum.Values", "as": "Values"}
     ],
     "mark": {"type": "geoshape"},
     "encoding": {
       "color": {
-        "field": "Active Cases",
-        "type": "quantitative"
+        "field": "Values",
+        "type": "quantitative",
+        "scale": {"range": ["#edf8bc", "#edf8bc"]}
       },
       "tooltip": [
         {"field": "properties.NAME", "type": "nominal", "title": "Country"},
