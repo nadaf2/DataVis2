@@ -37,7 +37,7 @@
     },
     {
       "calculate": "datum.Values",
-      "as": "Active Cases"
+      "as": "Percentage of Women in Management"
     }
   ],
   "mark": {
@@ -49,9 +49,12 @@
       "legend": null,
       "type": "quantitative",
       "scale": {
+        "domain": [10, 15, 36, 41],
         "range": [
-          "#54bcc0",
-          "#54bcc0"
+          "#ecf7bc",
+          "#68c4be",
+          "#2a97be",
+          "#1f398d"
         ]
       }
     },
@@ -62,7 +65,7 @@
         "title": "Country"
       },
       {
-        "field": "Values",
+        "field": "Percentage of Women in Management",
         "type": "quantitative"
       }
     ]

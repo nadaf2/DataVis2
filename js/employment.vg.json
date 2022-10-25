@@ -6,7 +6,7 @@
   },
   "repeat": [
     "Percentage",
-    "Parents_unemp_percentage"
+    "Unemployed_Parents"
   ],
   "config": {
     "axis": {

@@ -27,7 +27,7 @@
           "fields": ["Values"]
         }
       },
-      {"calculate": "datum.Values", "as": "Values"}
+      {"calculate": "datum.Values", "as": "Percentage of Women in Management"}
     ],
     "mark": {"type": "geoshape"},
     "encoding": {
@@ -35,12 +35,19 @@
         "field": "Values",
         "legend": null,
         "type": "quantitative",
-        "scale": {"range": ["#2359a5", "#2359a5"]
-    }
+        "scale": {
+          "domain": [10, 15, 36, 41],
+          "range": [
+            "#ecf7bc",
+            "#68c4be",
+            "#2a97be",
+            "#1f398d"
+          ]
+        }
       },
       "tooltip": [
         {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-        {"field": "Values", "type": "quantitative"}
+        {"field": "Percentage of Women in Management", "type": "quantitative"}
       ]
     }
   }
