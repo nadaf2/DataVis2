@@ -5,8 +5,8 @@
     "url": "https://raw.githubusercontent.com/nadaf2/DataVis2/main/data/EmploymentParent.csv"
   },
   "repeat": [
-    "Unemployed",
-    "Unemployed_Parents"
+    "Employed",
+    "Employed_Parents"
   ],
   "config": {
     "axis": {
