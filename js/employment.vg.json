@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "background": "#121212",
     "data": {
-      "url": "https://raw.githubusercontent.com/nadaf2/DataVis2/main/js/EmploymentParent.csv"
+      "url": "https://raw.githubusercontent.com/nadaf2/DataVis2/main/data/EmploymentParent.csv"
     },
     "repeat": ["Percentage", "Parents_unemp_percentage"],
     "config": {
