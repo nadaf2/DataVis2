@@ -5,7 +5,7 @@
     "url": "https://raw.githubusercontent.com/nadaf2/DataVis2/main/data/EmploymentParent.csv"
   },
   "repeat": [
-    "Umemployed",
+    "Unemployed",
     "Unemployed_Parents"
   ],
   "config": {
