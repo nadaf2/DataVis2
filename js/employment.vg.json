@@ -1,47 +1,71 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "background": "#121212",
-    "data": {
-      "url": "https://raw.githubusercontent.com/nadaf2/DataVis2/main/data/EmploymentParent.csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "#121212",
+  "data": {
+    "url": "https://raw.githubusercontent.com/nadaf2/DataVis2/main/data/EmploymentParent.csv"
+  },
+  "repeat": [
+    "Percentage",
+    "Parents_unemp_percentage"
+  ],
+  "config": {
+    "axis": {
+      "labelColor": "whitesmoke",
+      "titleColor": "whitesmoke",
+      "tickColor": "whitesmoke",
+      "gridColor": null
     },
-    "repeat": ["Percentage", "Parents_unemp_percentage"],
-    "config": {
-      "axis": {
-        "labelColor": "whitesmoke",
-        "titleColor": "whitesmoke",
-        "tickColor": "whitesmoke",
-        "gridColor":null
+    "legend": {
+      "labelColor": "whitesmoke",
+      "titleColor": "whitesmoke"
+    },
+    "view": {
+      "stroke": "transparent"
+    }
+  },
+  "spec": {
+    "width": 300,
+    "height": 240,
+    "mark": "line",
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "timeUnit": "year",
+        "title": ""
       },
-      "legend": {"labelColor": "whitesmoke", "titleColor": "whitesmoke"},
-      "view": {
-        "stroke": "transparent"
-      }
-    },
-    "spec": {
-      "width": 300,
-      "height": 240,
-      "mark": "line",
-      "encoding": {
-        "x": {
-          "field": "Year",
-          "timeUnit": "year",
-          "title": ""
+      "y": {
+        "field": {
+          "repeat": "repeat"
         },
-        "y": {
-          "field": {"repeat": "repeat"},
-          "type": "quantitative",
-          "scale": {"zero": false}
+        "type": "quantitative",
+        "scale": {
+          "zero": false
+        }
+      },
+      "color": {
+        "field": "Gender",
+        "type": "nominal",
+        "scale": {
+          "domain": [
+            "Female",
+            "Male"
+          ],
+          "range": [
+            "#e7ba52",
+            "#1f77b4"
+          ]
         },
-        "color": {
-          "field": "Gender",
-          "type": "nominal",
-          "scale": {
-            "domain": ["Female", "Male"],
-            "range": ["#e7ba52", "#1f77b4"]
+        "title": "Sex"
+
+      },
+      "tooltip": [
+        {
+          "field": {
+            "repeat": "repeat"
           },
-          "title": "Sex"
-        },
-        "tooltip": [{"field": {"repeat": "repeat"}, "type": "quantitative"}]
-      }
+          "type": "quantitative"
+        }
+      ]
     }
   }
+}
