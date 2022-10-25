@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 220,
-  "height": 300,
-  "background": "null",
+  "height": 350,
+  "background": "#121212",
   "config": {
     "axis": {
       "gridColor": "black"
@@ -21,7 +21,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/nadaf2/DataVis2/main/data/sweden.csv"
+          "url": "https://raw.githubusercontent.com/nadaf2/DataVis2/main/data/japan.csv"
         },
         "key": "Country",
         "fields": ["Values"]
@@ -33,8 +33,9 @@
   "encoding": {
     "color": {
       "field": "Values",
-      "type": "quantitative",
-      "scale": {"range": ["#edf8bc", "#edf8bc"]}
+      "legend": null,
+      "type": "quantitative"
+      
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},

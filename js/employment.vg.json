@@ -1,19 +1,31 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "background": "null",
+    "background": "#121212",
     "data": {
       "url": "https://raw.githubusercontent.com/nadaf2/DataVis2/main/data/EmploymentParent.csv"
     },
     "repeat": ["Percentage", "Parents_unemp_percentage"],
+    "config": {
+      "axis": {
+        "labelColor": "whitesmoke",
+        "titleColor": "whitesmoke",
+        "tickColor": "whitesmoke",
+        "gridColor":null
+      },
+      "legend": {"labelColor": "whitesmoke", "titleColor": "whitesmoke"},
+      "view": {
+        "stroke": "transparent"
+      }
+    },
     "spec": {
-      "width": 100,
+      "width": 300,
       "height": 240,
       "mark": "line",
       "encoding": {
         "x": {
           "field": "Year",
           "timeUnit": "year",
-          "title": "Employment by occupation"
+          "title": ""
         },
         "y": {
           "field": {"repeat": "repeat"},

@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 300,
-  "background": "null",
+  "background": "#121212",
   "config": {
     "axis": {
       "gridColor": "black"
@@ -46,6 +46,7 @@
   "encoding": {
     "color": {
       "field": "Values",
+      "legend": null,
       "type": "quantitative",
       "scale": {
         "range": [
